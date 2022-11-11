@@ -7,6 +7,7 @@
             TicTacToe jeu = new TicTacToe();
             bool xGagne = false;
             bool oGagne = false;
+            int position = 0;
 
             xGagne = jeu.gagnerTicTacToe('X');
 
@@ -15,6 +16,20 @@
             {
                 Console.WriteLine("X gagne");
             }
+
+            while (!jeu.isFini())
+            {
+                jeu.afficherJeu();
+
+                Console.WriteLine("Ou voulez vous placer votre symbole ?");
+                int.TryParse(Console.ReadLine(), out position);
+                jeu.placerSymbole(position);
+            }
+
+
+
+
+            
         }
     }
 }

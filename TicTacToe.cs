@@ -14,9 +14,9 @@ namespace TicTacToe
         public TicTacToe()
         {
             tableau = new char[9] {
-            'X', ' ', ' ',
-            ' ', 'X', ' ',
-            ' ', ' ', 'X'
+            ' ', ' ', ' ',
+            ' ', ' ', ' ',
+            ' ', ' ', ' '
             };
             this.tour = 0;
         }
@@ -59,7 +59,7 @@ namespace TicTacToe
             bool placer = false;
 
             // quel symbole est-ce que je place ?
-            int.TryParse(Console.ReadLine(), out position);
+            
 
             // est-ce que je peux placer la pièce à la position ?
             // quand je place un symbole, passer au tour suivant 

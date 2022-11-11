@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\natha\\OneDrive\\Documents\\Informatique\\Programmation\\Programmation orientée objet\\TicTacToe\\TicTacToe.csproj",
+      "projectUniqueName": "C:\\Users\\natha\\OneDrive\\Documents\\Informatique\\Programmation\\Programmation orientée objet\\Tic Tac\\Tic-Tac-Toe\\TicTacToe.csproj",
       "projectName": "TicTacToe",
-      "projectPath": "C:\\Users\\natha\\OneDrive\\Documents\\Informatique\\Programmation\\Programmation orientée objet\\TicTacToe\\TicTacToe.csproj",
+      "projectPath": "C:\\Users\\natha\\OneDrive\\Documents\\Informatique\\Programmation\\Programmation orientée objet\\Tic Tac\\Tic-Tac-Toe\\TicTacToe.csproj",
       "packagesPath": "C:\\Users\\natha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\natha\\OneDrive\\Documents\\Informatique\\Programmation\\Programmation orientée objet\\TicTacToe\\obj\\",
+      "outputPath": "C:\\Users\\natha\\OneDrive\\Documents\\Informatique\\Programmation\\Programmation orientée objet\\Tic Tac\\Tic-Tac-Toe\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\natha\\AppData\\Roaming\\NuGet\\NuGet.Config",
