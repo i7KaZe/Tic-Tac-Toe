@@ -9,22 +9,33 @@
             bool oGagne = false;
             int position = 0;
 
+            while (!jeu.isFini() && !jeu.gagnerTicTacToe('X') && !jeu.gagnerTicTacToe('O'))
+            {
+                Console.Clear();
+                jeu.afficherJeu();
+
+                Console.WriteLine("Ou voulez vous placer votre symbole (0-8) ?");
+                int.TryParse(Console.ReadLine(), out position);
+                jeu.placerSymbole(position);
+            }
+
             xGagne = jeu.gagnerTicTacToe('X');
+            oGagne = jeu.gagnerTicTacToe('O');
+
 
             if (xGagne == true)
 
             {
                 Console.WriteLine("X gagne");
             }
-
-            while (!jeu.isFini())
+            else if (oGagne == true)
             {
-                jeu.afficherJeu();
-
-                Console.WriteLine("Ou voulez vous placer votre symbole ?");
-                int.TryParse(Console.ReadLine(), out position);
-                jeu.placerSymbole(position);
+                Console.WriteLine("O gagne");
             }
+
+            jeu.afficherJeu();
+
+            
 
 
 

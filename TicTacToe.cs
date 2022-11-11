@@ -8,8 +8,8 @@ namespace TicTacToe
 {
     public class TicTacToe
     {
-        char[] tableau;
-        int tour;
+        public char[] tableau;
+        public int nbDeTour;
 
         public TicTacToe()
         {
@@ -18,7 +18,7 @@ namespace TicTacToe
             ' ', ' ', ' ',
             ' ', ' ', ' '
             };
-            this.tour = 0;
+            this.nbDeTour = 0;
         }
 
         public bool gagnerTicTacToe(char joueur)
@@ -49,9 +49,9 @@ namespace TicTacToe
             {
                 gagne = true;
             }
-
-
             return gagne;
+
+
         }
 
         public bool placerSymbole (int position)
@@ -66,16 +66,16 @@ namespace TicTacToe
 
             if (tableau[position] != 'X' && tableau[position] != 'O')
             {
-                if (this.tour %2 == 0)
+                this.nbDeTour++;
+                if (this.nbDeTour %2 == 0)
                 {
                     tableau[position] = 'X';
-                    tour++;
                 }
                 else
                 {
                     tableau[position] = 'O';
-                    tour++;
                 }
+                placer = true;
             }
 
             else
@@ -88,23 +88,21 @@ namespace TicTacToe
 
         public bool isFini()
         {
-            return this.tour >= 9;
+           return this.nbDeTour >= 9;
         }
 
         public void afficherJeu()
         {
+            Console.WriteLine("__________________");
             Console.WriteLine("|     |     |     |");
-            Console.WriteLine("|  {0}   |  {1}     |  {2}     |", this.tableau[0], this.tableau[1], this.tableau[2]);
-            Console.WriteLine("|     |     |     |");
+            Console.WriteLine("| {0}   | {1}   | {2}   |", this.tableau[0], this.tableau[1], this.tableau[2]);
             Console.WriteLine("|_____|_____|_____|");
             Console.WriteLine("|     |     |     |");
-            Console.WriteLine("|  {3}   |  {4}     |  {5}     |", this.tableau[3], this.tableau[4], this.tableau[5]);
-            Console.WriteLine("|     |     |     |");
+            Console.WriteLine("| {0}   | {1}   | {2}   |", this.tableau[3], this.tableau[4], this.tableau[5]);
             Console.WriteLine("|_____|_____|_____|");
             Console.WriteLine("|     |     |     |");
-            Console.WriteLine("|  {6}   |  {7}     |  {8}     |", this.tableau[6], this.tableau[7], this.tableau[8]);
-            Console.WriteLine("|     |     |     |");
-
+            Console.WriteLine("| {0}   | {1}   |  {2}  |", this.tableau[6], this.tableau[7], this.tableau[8]);
+            Console.WriteLine("|_____|_____|_____|");
         }
     }
 }
